@@ -11,6 +11,7 @@ $(function () {
     $('.login-box').show()
     $('.reg-box').hide()
   })
+  //注册页面注册密码相同
   layui.form.verify({
     // 自定义了一个叫做 pwd 校验规则
     pwd: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
@@ -60,8 +61,8 @@ $(function () {
         layer.msg('登录成功！')
         // 将登录成功得到的 token 字符串，保存到 localStorage 中
         localStorage.setItem('token', res.token)
-        // 跳转到后台主页
-        location.href = '/index.html'
+        // 跳转到后台主页 
+        location.href = '/index.html';
       }
     })
   })
